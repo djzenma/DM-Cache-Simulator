@@ -16,7 +16,6 @@ public:
     enum cacheResType {MISS=0, HIT=1};
     struct CacheBlock {
         bool valid = false;
-        bool coldStart = true;
         int tag;
     };
 

@@ -29,11 +29,11 @@ Cache::cacheResType Cache::cacheSimDM(unsigned int addr)
     unsigned int tag = addr >> numIndexBits;
     cout<<"index : "<<index<<" tag : "<<tag<<" new address "<<addressInBits.to_string()<<endl;
 
-    if(!cache[index].coldStart && cache[index].tag == tag)
+    if(cache[index].valid && cache[index].tag == tag)
         return HIT;
     else {
         cache[index].tag = tag;
-        cache[index].coldStart = false;
+        cache[index].valid = true;
         return MISS;
     }
 }

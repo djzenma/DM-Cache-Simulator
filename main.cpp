@@ -66,7 +66,7 @@ unsigned int memGen6()
 
 char *msg[2] = {"Miss","Hit"};
 
-#define		NO_OF_Iterations	1000000
+#define		NO_OF_Iterations	100
 int main()
 {
     Cache cache;
@@ -79,7 +79,7 @@ int main()
 
     for(int inst=0; inst < NO_OF_Iterations; inst++)
     {
-        addr = memGen1();
+        addr = memGen6();
         r = cache.cacheSimDM(addr);
         if(r == Cache::cacheResType::HIT) hit++;
         cout <<"0x" << setfill('0') << setw(8) << addr <<" ("<< msg[r] <<")\n";

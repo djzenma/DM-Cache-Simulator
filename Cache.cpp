@@ -27,7 +27,7 @@ Cache::cacheResType Cache::cacheSimDM(unsigned int addr)
     addr = addr >> numOffsetBits;
     unsigned int index = addr % (int) pow(2, numIndexBits);
     unsigned int tag = addr >> numIndexBits;
-    cout<<"index : "<<index<<" tag : "<<tag<<" new address "<<addressInBits.to_string()<<endl;
+    cout<<"index : "<<index<<" tag : "<<tag<<" address: ";//<<" new address "<<addressInBits.to_string()<<endl;
 
     if(cache[index].valid && cache[index].tag == tag)
         return HIT;

@@ -80,7 +80,7 @@ int main()
 
     for(int inst=0; inst < NO_OF_Iterations; inst++)
     {
-        addr = memGen1();
+        addr = memGen3();
         r = cache.cacheSimDM(addr);
         if(r == Cache::cacheResType::HIT) hit++;
         cout <<"0x" << setfill('0') << setw(8) << addr <<" ("<< msg[r] <<")\n";

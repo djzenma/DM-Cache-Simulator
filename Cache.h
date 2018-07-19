@@ -19,7 +19,7 @@ public:
         int tag;
     };
 
-    static const int CACHE_LINE_SIZE = 64;
+    static const int CACHE_LINE_SIZE = 128;
     static const int numLines = CACHE_SIZE/ CACHE_LINE_SIZE;
 
     CacheBlock cache[numLines];
